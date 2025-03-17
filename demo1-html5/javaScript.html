@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script src="../js/external-script.js"></script>
+</head>
+
+<body>
+    <div class="div1">
+        <span>div1</span>
+    </div>
+    <div class="div2">
+        <span>div2</span>
+    </div>
+    <button id="but1">回调函数</button>
+    <script>
+        function inlineFunction() {
+            alert('内嵌式js测试')
+            let arr = [1, 2, 3];
+            arr[4] = 5;
+            console.log(arr[4]);
+        }
+        // 获取所有div标签的第一个div的数据
+        function test1() {
+            let abc2 = document.querySelector('div');
+            alert(abc2.textContent);
+            console.log(abc2);
+        }
+        // 获取所有div标签构造成一个数组
+        function test2() {
+            let a = document.querySelectorAll('div');
+            alert(a);
+            console.log(a);
+        }
+        let but1 = document.getElementById('but1');
+        but1.onclick = function () {
+            alert("回调函数")
+        }
+    </script>
+    <button onclick="inlineFunction()">内嵌式js测试</button>
+    <button onclick="externalButton()">外部式js测试</button>
+    <button onclick="test1()">document.querySelector()</button>
+    <button onclick="test2()">document.querySelectorAll()</button>
+    
+
+</body>
+
+</html>

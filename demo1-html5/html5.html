@@ -1,0 +1,217 @@
+<!-- <!DOCTYPE html>文档声明，必须写在第一行，声明这是一个html文档 -->
+<!DOCTYPE html>
+<!-- 
+    html专业词汇
+      标签 tag        页面上的一对<>
+      属性 attribute     对标签特征进行设置的一种方式，一般在开始标签中设置。如<img src="rose.jpg" alt="鲜花" />中的src和alt属性
+      文本 text          双标签内部的文字内容
+      元素 element        开始标签 + 属性 + 文本 + 结束标签组成的完整的HTML代码 
+      文档类型 document type
+-->
+<html lang="en">
+  <head>
+    <!-- 告诉浏览器用什么字符集解码 -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .styledDiv {
+        /* 上边距为10像素 */
+        margin-top: 10px;
+        /* 右边距为20像素 */
+        margin-right: 20px;
+        /* 下边距为15像素 */
+        margin-bottom: 15px;
+        /* 左边距为100像素 */
+        margin-left: 100px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="styledDiv">
+      注释标签,快捷键alt + /
+      <p>
+        <!--  -->
+        <!-- html -->
+
+        标题标签 h1 - h6
+      </p>
+
+      <h1>一级标题</h1>
+      <h2>二级标题</h2>
+      <h3>三级标题</h3>
+      <h4>四级标题</h4>
+      <h5>五级标题</h5>
+      <h6>六级标题</h6>
+
+      <p>段落标签，行之间会有间距</p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      <p></p>
+      Culpa, asperiores delectus. Nobis repellat illum officiis culpa, quae
+      consectetur sequi in dolorem ad perferendis quia accusantium nostrum modi
+      est nam? Nulla?
+      <p></p>
+      <br />换行标签，行之间不会有间距，<br />单标签
+
+      <strong>加粗&lt;strong&gt;&lt;/strong&gt;</strong><br />
+      <b>加粗&lt;b&gt;&lt;/b&gt;</b>
+      <p></p>
+
+      <em>倾斜&lt;em&gt;&lt;/em&gt;</em><br />
+      <i>倾斜&lt;i&gt;&lt;/i&gt;</i>
+      <p></p>
+
+      <del>删除线&lt;del&gt;&lt;/del&gt;</del><br />
+      <s>删除线&lt;s&gt;&lt;/s&gt;</s>
+      <p></p>
+
+      <ins>下划线&lt;ins&gt;&lt;/ins&gt;</ins><br />
+      <u>下划线&lt;u&gt;&lt;/u&gt;</u>
+      <p></p>
+
+      alt: 替换文本. 当文本不能正确显示的时候, 会显示一个替换的文字<br />
+      title: 提示文本. 鼠标放到图片上, 就会有提示<br />
+      width/height: 控制宽度高度. 高度和宽度一般改一个就行,
+      另外一个会等比例缩放. 否则就会图片失衡<br />
+      border: 边框, 参数是宽度的像素. 但是一般使用 CSS 来设定<br />
+      <img
+        src="rose.jpg"
+        alt="鲜花"
+        title="这是一朵鲜花"
+        width="500px"
+        height="800px"
+        border="5px"
+      />
+      <p></p>
+
+      href: 必须具备,标识点击之后会跳转到哪个页面<br />
+      target: 打开方式,默认是_self,如果是_blank则用新的标签页打开<br />
+      <a href="https://www.baidu.com" target="_self">超链接标签_当前页面跳转</a
+      ><br />
+      <a href="https://www.baidu.com" target="_blank">超链接标签_新页面跳转</a>
+      <p></p>
+
+      <h3>表格标签</h3>
+      <table border="1">
+        <tr>
+          <th>标签名</th>
+          <th>用处</th>
+          <th>备注</th>
+        </tr>
+        <tr>
+          <td>table</td>
+          <td>表示整个表格</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>tr</td>
+          <td>表示表格的一行</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>th</td>
+          <td>表示表格单元格，会居中加粗</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>thead</td>
+          <td>表格的头部区域(注意和 th 区分, 范围是比 th 要大的)</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>tbody</td>
+          <td>表格的主体区域</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>border</td>
+          <td>定义表格边框</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>colspan</td>
+          <td colspan="2">水平合并单元格</td>
+        </tr>
+        <tr>
+          <td>rowspan</td>
+          <td rowspan="2">垂直合并单元格</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>测试垂直合并</td>
+        </tr>
+      </table>
+
+      <h3>无序列表</h3>
+      <ul>
+        <li>张三</li>
+        <li>李四</li>
+        <li>王五</li>
+        <li>赵六</li>
+      </ul>
+
+      <h3>有序列表</h3>
+      <ol>
+        <li>张三</li>
+        <li>李四</li>
+        <li>王五</li>
+        <li>赵六</li>
+      </ol>
+
+      <h3>from标签</h3>
+      使用form进行前后端交互,把页面上用户进行的操作/输入提交到服务器上,在http协议的学习中会详细展开
+
+      <h3>input标签</h3>
+      <ul>
+        <li>单行文本框<br /><input type="text" /></li>
+        <li>密码框(输入的内容会被隐藏)<br /><input type="password" /></li>
+        <li>
+          单选框(需要加上相同的name属性下可以进行单选)<br />
+          <input type="radio" name="sex" />男
+          <input type="radio" name="sex" />女<br />
+          加上checkd属性会被默认选中<br />
+          <input type="radio" name="sex" />男
+          <input type="radio" name="sex" checked="checked" />女<br />
+        </li>
+        <li>
+          复选框<br />
+          <input type="checkbox" />吃饭 <input type="checkbox" />睡觉
+          <input type="checkbox" checked="checkbox" />打豆豆
+        </li>
+        <li>
+          按钮<br />
+          <input type="button" value="按钮1" />
+        </li>
+        <li>
+          选择文件<br />
+          <input type="file" />
+        </li>
+      </ul>
+
+      <h3>select标签</h3>
+      select需要搭配option使用<br />
+      加上selected属性表示默认被选中<br />
+      <select name="" id="">
+        <option value="">上海</option>
+        <option selected="selected" value="">杭州</option>
+        <option value="">深圳</option>
+        <option value="">广州</option>
+      </select>
+
+      <h3>textarea标签</h3>
+      textarea表示一个文本域，可通过设置rows和cols控制文本域的默认大小<br />
+      <textarea name="" id="" cols="30" rows="10"></textarea>
+
+      <h3>无语义标签: div&span</h3>
+      <ul>
+        <li>
+          <div>div独占一行</div>
+          <span>span</span>不独占一行
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

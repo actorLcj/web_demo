@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单</title>
+</head>
+
+<body>
+    <!-- 
+        form    表单标签
+            action  定义数据的提交地址
+                1   url
+                2   相对路径
+                3   绝对路径
+            method  定义数据的提交方式
+                GET
+                    1.参数在url中显示 url?参数名=参数值&参数名=参数值
+                    2.数据直接暴露在地址栏，相对不安全
+                    3.地址栏长度有限，所以提交的数据量不大
+                    4.地址栏上只能是字符串，不能携带复杂数据：如图片、视频、音频、文件等
+                    5.相对于POST，效率相对高一点
+                POST    
+                    1.参数在请求体中显示，不放到url中
+                    2.数据不会暴露在地址栏，安全性高
+                    3.数据单独打包通过请求体发送，提交的数据量比较大
+                    4.可以携带复杂数据：如图片、视频、音频、文件等
+                    5.相对于GET，效率相对低一点 
+                PUT
+                DELETE
+                ...
+        
+            
+            表单项标签
+            表单项标签一定要定义name属性，用于明确提交数据的参数名
+            表单项还需要明确value属性，用于明确提交时的实参
+            input
+                type    定义输入框的类型
+                    text    单行文本框
+                    password    密码文本框
+                    radio    单选按钮   多个选项选其一
+                        多个单选框用同一个name属性，则会有互斥效果
+                    checkbox    多选按钮    多个选项选多个
+                    hidden    隐藏域   不显示在页面上，提交时会携带，用于传递隐藏信息
+
+                    submit    提交按钮
+                    reset    重置按钮
+                    button    自定义按钮
+                    file    文件上传框
+            textarea     文本域      多行文本框
+            select    下拉列表框
+                option    下拉列表项
+    -->
+
+    <form action="08welcome.html" method="get">
+        <!-- 添加表单项标签 用户输入信息的标签-->
+        <!-- hidden 隐藏域，用于传递隐藏信息 -->
+        <input type="hidden" name="id" value="123"><br>
+        <!-- readonly 只读 -->
+        <input type="text" name="pid" value="456" readonly><br>
+        <!-- disabled 禁用 -->
+        <input type="text" name="tid" value="456" disabled><br>
+        用户名：<input type="text" name="username"> <br>
+        密码：<input type="password" name="password"> <br>
+        性别：
+        <input type="radio" name="gender" value="1" checked>男
+        <input type="radio" name="gender" value="0">女
+        <br>
+        爱好：
+        <input type="checkbox" name="hobby" value="1" checked>篮球
+        <input type="checkbox" name="hobby" value="2">足球
+        <input type="checkbox" name="hobby" value="3">羽毛球
+        <input type="checkbox" name="hobby" value="4">乒乓球
+        <input type="checkbox" name="hobby" value="5">网球
+        <br>
+        个人简介：<br>
+        <textarea name="introduction" id="" style="width: 300px; height: 100px;">123123123123123</textarea><br>
+        籍贯：
+        <select name="province">
+            <option value="1">北京</option>
+            <option value="2">上海</option>
+            <option value="3">广州</option>
+            <option value="4">深圳</option>
+            <option value="0" selected>请选择</option>
+        </select>
+        <br>
+        头像：
+        <input type="file"><br>
+        
+
+
+
+
+        <input type="submit" value="登录">
+        <input type="reset" value="重置">
+
+
+    </form>
+</body>
+
+</html>

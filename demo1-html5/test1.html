@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>添加数据</title>
+
+    <style>
+        * {
+            /* 消除浏览器的默认样式 */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 600px;
+            margin: 20px auto;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+            color: #666;
+            margin: 20px auto;
+        }
+
+        .row {
+            /* 开启弹性布局 */
+            display: flex;
+            height: 40px;
+            /* 水平方向居中 */
+            justify-content: center;
+            /* 垂直方向居中 */
+            align-items: center;
+        }
+
+        .row span {
+            width: 80px;
+        }
+
+        .row input {
+            width: 200px;
+            height: 30px;
+        }
+
+        .row button {
+            width: 280px;
+            height: 30px;
+            color: white;
+            background-color: orange;
+            /* 去掉边框 */
+            border: none;
+            border-radius: 5px;
+        }
+
+        /* 点击的时候有个反馈 */
+        .row button:active {
+            background-color: grey;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>添加数据</h1>
+        <p>输入内容后点击提交，数据会在下方展示</p>
+        <div class="row">
+            <span>名称</span>
+            <input type="text">
+        </div>
+        <div class="row">
+            <span>年龄</span>
+            <input type="text">
+        </div>
+        <div class="row">
+            <span>性别</span>
+            <input type="text">
+        </div>
+        <div class="row" id="but">
+            <button id="button">提交数据</button>
+        </div>
+        14.14
+    </div>
+    <script>
+        // 获取第一个类名为container的所有元素
+        let containerDiv = document.querySelector('.container');
+        // 获取所有input的元素
+        let input_list = document.querySelectorAll('input');
+        // 获取第一个button的所有元素
+        let button = document.querySelector('button');
+        button.onclick = function () {
+            // 获取三个输入框的内容
+            let name = input_list[0].value;
+            let age = input_list[1].value;
+            let sex = input_list[2].value;
+            //判断如果三个输入框有空值，直接返回
+            if (name == '' || age == '' || sex == '') {
+                return;
+            }
+            // 构造新的div
+            let new_div = document.createElement('div');
+            new_div.className = 'row';
+            new_div.innerHTML = '姓名:' + name + '年龄:' + age + '性别' + sex;
+            containerDiv.appendChild(new_div);
+            // 清空之前的输入框的内容
+            input_list.forEach(element => {
+                element.value = '';
+            });
+
+        }
+
+    </script>
+
+</body>
+
+</html>

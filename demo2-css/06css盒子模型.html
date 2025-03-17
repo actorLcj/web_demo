@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outerDiv{
+            width: 400px;
+            height: 300px;
+            border: 1px solid black;
+            background-color: rgb(220, 230, 239);
+            margin: 0px auto;
+        }
+
+        .innerDiv{
+            width: 100px;
+            height: 100px;
+            border: 1px solid blue;
+            /* display: inline; block 块 inline 行内 */
+
+        }
+        .d1{
+            background-color: rgb(175, 244, 244);
+            float: left;
+            /* margin-right: 10px;
+            margin-top: 10px;
+            margin-left: 10px;
+            padding-left: 20px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-right: 20px; */
+            
+            /*上 右 下 左 
+                一个值：上下左右
+                两个值：上下    左右    
+            */
+            margin: 10px 20px 30px 40px; 
+
+        }
+        .d2{
+            background-color: rgb(187, 178, 239);
+            float: left;
+        }
+        .d3{
+            background-color: rgb(244, 184, 235);
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="outerDiv">
+        <div class="innerDiv d1">diva</div>
+        <div class="innerDiv d2">divb</div>
+        <div class="innerDiv d3">divcc</div>
+    </div>
+    
+</body>
+</html>

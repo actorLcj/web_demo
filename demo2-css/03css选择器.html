@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS选择器</title>
+
+    <style>
+        /* 
+            1.元素选择器    根据标签的名字确定样式作用的元素
+                语法：标签名{}    
+                缺点：某些不同名的样式也想用这个样式，同名的不想用这个样式
+            2.id选择器  根据标签的id属性的值确定作用的元素
+                语法：#id值{}  
+                缺点：id值具有唯一性，样式只能作用到一个元素上
+            3. class选择器  根据元素的class属性值确定作用的样式
+                语法：.class{}
+
+        */
+        input{
+            width: 100px;
+            height: 30px;
+            background-color: aqua;
+            color: aliceblue;
+            }
+
+        #btn1{
+            width: 100px;
+            height: 30px;
+            background-color: red;
+        }
+        .btn{
+            width: 100px;
+            height: 30px;
+            background-color: rgb(145, 135, 204);   
+        }
+
+    </style>
+
+</head>
+<body>
+    <input type="button" value="按钮">
+    <input id="btn1" type="button" value="按钮1">
+    <input class="btn" id="btn2" type="button" value="按钮2">
+    <input class="btn" type="button" value="按钮">
+    <button>按钮</button>
+</body>
+</html>

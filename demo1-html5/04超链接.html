@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        超链接的基本语法：
+        <a href="链接地址">链接显示文字</a>
+        注意：href属性的值必须是一个有效的URL地址，否则将无法正常跳转。
+
+        超链接的属性：
+        target="_blank"：在新窗口打开链接
+        target="_self"：在当前窗口打开链接
+        target="_parent"：在父窗口打开链接
+        target="_top"：在整个窗口打开链接
+
+        download="文件名"：下载文件
+        rel="nofollow"：告诉搜索引擎不要跟踪此链接
+
+        超链接的样式：
+        a:link {color:red;} /* 未访问的链接 */
+        a:visited {color:blue;} /* 已访问的链接 */
+        a:hover {color:green;} /* 鼠标悬停 */
+        a:active {color:purple;} /* 正在点击的链接 */
+
+        超链接的应用：
+        锚点定位：
+        <a href="#top">回到顶部</a>
+        <div id="top">这里是内容</div>
+        下载文件：
+        <a href="文件路径" download="文件名">下载文件</a>
+        链接到其他网站：
+        <a href="http://www.example.com">跳转到其他网站</a>
+        链接到同一页面的不同位置：
+        <a href="#section1">跳转到section1</a>
+        <h2 id="section1">这里是section1</h2>
+    -->
+    <a href="https://www.baidu.com" target="_blank">百度</a>
+    <a href="https://www.baidu.com" target="_self">百度</a>
+
+    <!-- 相对路径写法 -->
+    <a href="02标题段落换行.html" target="_blank">02标题段落换行.html</a>
+    <a href="a/test.html" target="_self">a/test.html</a>
+    <!-- 绝对路径写法 -->
+    <a href="/web/html5/a/test.html" target="_blank">/web/html5/a/test.html</a>
+</body>
+</html>

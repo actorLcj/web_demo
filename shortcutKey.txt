@@ -1,0 +1,17 @@
+代码格式化
+shift + alt + F
+
+向下移動或向上移動
+alt + PgUp/PgDn
+
+快速复制一行代码
+shift + alt + PgUp/PgDn
+
+快速查找
+ctrl + f
+
+快速保存
+ctrl + s
+
+快速替换
+ctrl + H
